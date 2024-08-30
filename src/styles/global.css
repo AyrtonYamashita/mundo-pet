@@ -1,0 +1,141 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* CONTENT COLORS */
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  /* BACKGROUND COLORS */
+  --background-primary: #151515;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4fa;
+
+  /* BORDER COLORS */
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  /* ACCENT COLORS */
+  --accent-blue: #027df9;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
+
+  /* FONT STYLES */
+  --ff-it: "Inter Tight", sans-serif;
+  --ff-inter: "Inter", sans-serif;
+
+  --ft: 700 1.5rem/2rem var(--ff-it);
+  --fp-base: 400 1rem/100% var(--ff-inter);
+  --fp-m: 500 0.875rem/1.5rem var(--ff-inter);
+  --fp-sm: 500 0.75rem/1rem var(--ff-inter);
+  --fl-l: 700 1rem/1.5rem var(--ff-inter);
+  --fl-m: 700 0.875rem/1.5rem var(--ff-inter);
+  --fl-s: 700 0.75rem/1rem var(--ff-inter);
+  --f-link: 500 0.75rem/1rem var(--ff-inter);
+}
+
+html {
+  font: var(--fp-base);
+  color: white;
+}
+
+body {
+  background: #14151d;
+  min-width: 68.75rem;
+  min-height: 100vh;
+  display: flex;
+
+  & header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7%;
+    height: 6%;
+    padding: 0.75rem 1.25rem;
+    background: #2e2c30;
+    border-bottom-right-radius: 0.75rem;
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+main {
+  margin-inline: auto;
+  width: 6 0rem;
+  height: 100vh;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title-header {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    justify-content: center;
+    gap: 0.75rem;
+
+    .title h1 {
+      font: var(--ft);
+      color: var(--content-primary);
+    }
+    .title p {
+      font: var(--fp-m);
+      color: var(--content-secondary);
+    }
+    input {
+      width: 10.75rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      background: none;
+      color: var(--content-secondary);
+      outline: none;
+      border: 1px solid var(--border-primary);
+      margin-left: auto;
+    }
+  }
+
+  .morning{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--background-secondary);
+    padding: 1.25rem;
+    border-radius: 1.6rem;
+    
+    .morning-title{
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      width: 100%;
+      border-bottom: 1px solid #2e2c30;
+
+      h2:nth-child(3){
+         margin-left: auto;
+         color: var(--content-secondary);
+      }
+    }
+
+    .schedule{
+      padding: 1.25rem;
+    }
+  }
+}
