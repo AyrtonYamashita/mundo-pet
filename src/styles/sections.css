@@ -2,23 +2,81 @@ section.morning {
   width: 100%;
   min-height: 8.5rem;
   background: var(--background-tertiary);
-  border-radius: .625rem;
+  border-radius: 0.625rem;
 
   .title {
     font: 700 1rem/24px var(--ff-it), sans-serif;
     display: flex;
-    padding: .75rem 1.25rem;
-    border-bottom: 1px solid var(--border-primary);
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid var(--border-divisor);
   }
 
-  .morning-icon{
+  .morning-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
-  .period-head{
+  .period-head {
+    margin-left: auto;
+  }
+
+  .period {
+    color: var(--content-secondary);
+  }
+}
+
+section.sunset {
+  width: 100%;
+  min-height: 8.5rem;
+  background: var(--background-tertiary);
+  border-radius: 0.625rem;
+
+  .title {
+    font: 700 1rem/24px var(--ff-it), sans-serif;
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid var(--border-divisor);
+  }
+
+  .sunset-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .period-head {
+    margin-left: auto;
+  }
+
+  .period {
+    color: var(--content-secondary);
+  }
+}
+
+section.night {
+  width: 100%;
+  min-height: 8.5rem;
+  background: var(--background-tertiary);
+  border-radius: 0.625rem;
+
+  .title {
+    font: 700 1rem/24px var(--ff-it), sans-serif;
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid var(--border-divisor);
+  }
+
+  .night-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .period-head {
     margin-left: auto;
   }
 

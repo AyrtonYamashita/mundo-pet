@@ -50,7 +50,7 @@
 
 html {
   font: var(--fp-base);
-  color: white;
+  color: var(--content-primary);
 }
 
 body {
@@ -73,8 +73,68 @@ body {
   }
 }
 
-.container{
+ul {
+  list-style: none;
+  width: 100%;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: var(--fp-sm);
+  padding: 1rem;
+}
+
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
+}
+
+.list-schedules {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.hour {
+  font: var(--fl-s);
+}
+
+.pacient {
+  font: var(--fl-s);
+  width: 10rem;
+  overflow: hidden;
+}
+
+.name {
+  font: var(--fp-sm);
+  color: var(--content-secondary);
+}
+
+.service {
+  color: var(--content-secondary);
+  width: 10rem;
+  overflow: hidden;
+}
+
+.cancel {
+  cursor: pointer;
+  color: var(--content-secondary);
+  transition: 0.1s ease;
+
+  &:hover {
+    color: var(--content-primary);
+    text-decoration: underline;
+  }
+}
+
+.border {
+  border-bottom: 1px solid var(--border-divisor);
 }
