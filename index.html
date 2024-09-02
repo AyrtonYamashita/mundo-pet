@@ -29,21 +29,26 @@
             Aqui você pode ver todos os clientes e serviços agendados para hoje.
           </p>
         </div>
-        <input type="date" />
+        <div class="custom-input-date">
+          <input type="date" id="date-input" />
+        </div>
       </div>
 
-      <div data-period="morning" class="morning">
-        <div class="morning-title">
-          <img src="./src/assets/icons/sun.svg" alt="ícone de sol da manhã" />
-          <h2>Manhã</h2>
-          <h2>09h-12h</h2>
-        </div>
-        <ul class="schedule">
-          <li class="hour">09:00</li>
-          <li class="name">Thor / Fernanda Costa</li>
-          <li class="service">Vacinação</li>
-          <li class="cancel">Remover agendamento</li>
-        </ul>
+      <div class="container">
+
+        <section class="morning">
+          <div class="title">
+            <div class="morning-icon">
+              <img src="./src/assets/icons/sun.svg" alt="ícone de sol">
+              <span class="morning-title">Manhã</span>
+            </div>
+            <div class="period-head">
+              <span class="period">09h-12h</span>
+            </div>
+          </div>
+        </section>
+
+        
       </div>
     </main>
   </body>

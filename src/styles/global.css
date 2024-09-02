@@ -57,85 +57,24 @@ body {
   background: #14151d;
   min-width: 68.75rem;
   min-height: 100vh;
-  display: flex;
 
-  & header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 7%;
-    height: 6%;
-    padding: 0.75rem 1.25rem;
-    background: #2e2c30;
-    border-bottom-right-radius: 0.75rem;
-  }
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-}
-
-main {
-  margin-inline: auto;
-  width: 6 0rem;
-  height: 100vh;
-  padding: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .title-header {
-    display: flex;
+  header {
     width: 100%;
-    margin-bottom: 2rem;
-    justify-content: center;
-    gap: 0.75rem;
-
-    .title h1 {
-      font: var(--ft);
-      color: var(--content-primary);
-    }
-    .title p {
-      font: var(--fp-m);
-      color: var(--content-secondary);
-    }
-    input {
-      width: 10.75rem;
-      height: 3rem;
-      border-radius: 0.5rem;
-      background: none;
-      color: var(--content-secondary);
-      outline: none;
-      border: 1px solid var(--border-primary);
-      margin-left: auto;
-    }
-  }
-
-  .morning{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: var(--background-secondary);
-    padding: 1.25rem;
-    border-radius: 1.6rem;
-    
-    .morning-title{
+    img {
       display: flex;
       align-items: center;
-      gap: .75rem;
-      width: 100%;
-      border-bottom: 1px solid #2e2c30;
-
-      h2:nth-child(3){
-         margin-left: auto;
-         color: var(--content-secondary);
-      }
-    }
-
-    .schedule{
-      padding: 1.25rem;
+      justify-content: center;
+      width: 9rem;
+      height: 3rem;
+      padding: 0.75rem 1.25rem;
+      background: #2e2c30;
+      border-bottom-right-radius: 0.75rem;
     }
   }
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
