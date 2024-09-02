@@ -1,7 +1,6 @@
 main {
   margin-inline: auto;
   width: 70rem;
-  height: 100vh;
   padding: 1rem 5rem;
   display: flex;
   flex-direction: column;

@@ -138,3 +138,37 @@ ul li {
 .border {
   border-bottom: 1px solid var(--border-divisor);
 }
+
+.new-schedule{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translate(-10%, -100%);
+  background: var(--content-brand);
+  color: #050505;
+  width: 13.625rem;
+  height: 3rem;
+  font: var(--fl-l);
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: .1s ease;
+  z-index: 1;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    filter: blur(50px);
+    background: #9282fa6e;
+    z-index: -2;
+  }
+
+  &:hover{
+    color: var(--content-primary);
+    scale: 1.02;
+  }
+}
