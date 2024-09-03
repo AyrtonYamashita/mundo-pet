@@ -1,9 +1,12 @@
 main {
+  position: relative;
   margin-inline: auto;
   width: 70rem;
   padding: 1rem 5rem;
   display: flex;
   flex-direction: column;
+  transition: .5s ease;
+  
 
   .title-header {
     display: flex;
