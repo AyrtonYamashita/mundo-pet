@@ -56,6 +56,7 @@ html {
 body {
   background: #14151d;
   min-width: 68.75rem;
+  width: 100%;
   min-height: 100vh;
 
   header {
@@ -84,10 +85,15 @@ ul {
 
 ul li {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   font: var(--fp-sm);
   padding: 1rem;
+}
+
+ul li div {
+  display: flex;
+  justify-content: space-between;
+  width: 18rem;
 }
 
 .container {
@@ -95,12 +101,6 @@ ul li {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-}
-
-.list-schedules {
-  display: flex;
-  align-items: center;
-  padding: 1.25rem;
 }
 
 .hour {
@@ -149,7 +149,8 @@ ul li {
   transform: translate(-10%, -100%);
   background: var(--content-brand);
   color: #050505;
-  width: 13.625rem;
+  max-width: 13.625rem;
+  width: 100%;
   height: 3rem;
   font: var(--fl-l);
   border-radius: 0.5rem;
@@ -170,4 +171,35 @@ ul li {
   &:hover {
     color: var(--content-primary);
   }
+}
+
+.list-schedules {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+@media (width <= 40rem) {
+  body {
+    min-width: 20rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  ul li {
+    flex-direction: column;
+    justify-content: start;
+    gap: .325rem;
+    border-bottom: 1px solid #8181813d;
+
+    span:nth-child(3){
+      margin-left: auto;
+      margin-top: .75rem;
+    }
+  }
+
+  ul li div {
+    width: 13rem;
+  }
+
 }

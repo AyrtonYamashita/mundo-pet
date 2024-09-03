@@ -84,3 +84,10 @@ section.night {
     color: var(--content-secondary);
   }
 }
+
+@media(width <= 40rem){
+  section {
+    max-width: 23rem;
+    width: 100%;
+  }
+}
