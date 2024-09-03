@@ -133,8 +133,95 @@
       </div>
     </main>
 
-    <div class="new-schedule">
-      NOVO AGENDAMENTO
+    <div class="new-schedule">NOVO AGENDAMENTO</div>
+
+    <div class="form-popup">
+      <form>
+        <header>
+          <h1>Agende um atendimento</h1>
+          <p>Preencha os dados do cliente para realizar o atendimento:</p>
+        </header>
+
+        <div class="input-wrapper">
+          <fieldset>
+            <legend>Nome do tutor</legend>
+            <div class="input-inner">
+              <input
+                type="text"
+                placeholder="Helena Souza"
+                class="fielder"
+                id="name-tutor"
+              />
+              <img
+                src="./src/assets/icons/user.svg"
+                alt="ícone de usuário"
+                class="tutor-icon"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Nome do pet</legend>
+            <div class="input-inner">
+              <input
+                type="text"
+                placeholder="Cheddar"
+                class="fielder"
+                id="name-pet"
+              />
+              <img
+                src="./src/assets/icons/pet.svg"
+                alt="pata de um pet"
+                class="tutor-icon"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Telefone</legend>
+            <div class="input-inner">
+              <input
+                type="text"
+                placeholder="(00) 0 0000-0000"
+                class="fielder"
+                id="phone"
+              />
+              <img
+                src="./src/assets/icons/phone.svg"
+                alt="telefone"
+                class="tutor-icon"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Descrição do serviço</legend>
+            <div class="input-inner">
+              <input type="text" placeholder="Banho e tosa" class="desc" />
+            </div>
+          </fieldset>
+
+          <div class="date-wrapper">
+            <fieldset>
+              <legend>Data</legend>
+              <div class="input-inner">
+                <input type="date" placeholder="Banho e tosa" class="fielder-date" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Hora</legend>
+              <div class="input-inner">
+                <input type="time"  placeholder="Banho e tosa" class="fielder-date-hour" />
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <button type="submit">
+          AGENDAR
+        </button>
+      </form>
     </div>
   </body>
 </html>

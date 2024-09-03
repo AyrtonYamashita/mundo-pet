@@ -139,7 +139,7 @@ ul li {
   border-bottom: 1px solid var(--border-divisor);
 }
 
-.new-schedule{
+.new-schedule {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,23 +152,22 @@ ul li {
   width: 13.625rem;
   height: 3rem;
   font: var(--fl-l);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: .1s ease;
+  transition: 0.2s ease;
   z-index: 1;
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     filter: blur(50px);
     background: #9282fa6e;
     z-index: -2;
   }
 
-  &:hover{
+  &:hover {
     color: var(--content-primary);
-    scale: 1.02;
   }
 }
