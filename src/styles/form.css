@@ -207,3 +207,21 @@ fieldset {
   display: flex;
   justify-content: space-between;
 }
+
+@media (width <= 40rem){
+  .form-popup{
+    width: 25rem;
+  }
+
+  .date-wrapper{
+    flex-direction: column;
+  }
+
+  .fielder-date-hour{
+    width: 100%;
+  }
+
+  .fielder-date{
+    width: 100%;
+  }
+}
