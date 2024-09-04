@@ -61,7 +61,7 @@ main {
     }
 
     .custom-input-date::before {
-      content: url(../assets/icons/calendar.svg);
+      content: url(../assets/calendar.svg);
       position: absolute;
       left: 10px;
       top: 50%;
@@ -69,7 +69,7 @@ main {
     }
 
     .custom-input-date::after {
-      content: url(../assets/icons/arrow-down.svg);
+      content: url(../assets/arrow-down.svg);
       position: absolute;
       right: 10px;
       top: 50%;
