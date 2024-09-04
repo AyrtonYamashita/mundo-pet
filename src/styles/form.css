@@ -55,7 +55,7 @@ fieldset {
 
 .form-popup {
   display: block;
-  opacity: 0;
+  opacity: 1;
   width: 30rem;
   padding: 2.5rem;
   background: var(--background-tertiary);
@@ -149,45 +149,94 @@ fieldset {
   }
 }
 
-.fielder-date-hour {
+.field-hour {
   position: relative;
-  align-items: center;
   width: 12rem;
   height: 3rem;
   border-radius: 0.5rem;
-  background: none;
   border: 1px solid var(--border-primary);
   font: 400 1rem/150% "Inter", sans-serif;
   color: var(--content-secondary);
   z-index: 1;
   padding-inline: 2.5rem;
+  cursor: pointer;
 
-  &::-webkit-calendar-picker-indicator {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    transform: translateY(-0%);
-    width: 100%;
-    height: 100%;
-    border: 1px solid;
-    z-index: 2;
-    opacity: 0;
+  .select-selected {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
   }
 
-  &::before {
-    content: url(../assets/clock.svg);
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-40%);
-  }
-
-  &::after {
+  .select-selected::after {
     content: url(../assets/arrow-down.svg);
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-40%);
+  }
+
+  .select-selected::before {
+    content: url(../assets/clock.svg);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-40%);
+    z-index: 2;
+  }
+
+  .select-items {
+    position: absolute;
+    width: 12rem;
+    max-height: 10rem;
+    overflow-y: scroll;
+    gap: 0.125rem;
+    border-radius: 0.5rem;
+    border: inherit;
+    background: #1f1f1f;
+    top: 10;
+    right: 0;
+
+    &::-webkit-scrollbar {
+      width: 0.25rem;
+      appearance: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--border-brand);
+      border-radius: 99px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #d7d1ff;
+      border-radius: 99px;
+    }
+  }
+
+  .select-items div {
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    width: 10rem;
+    height: 2.5rem;
+    padding: 0.25rem;
+    transition: 0.2s ease;
+
+    &:hover {
+      background: var(--content-brand);
+      color: var(--background-primary);
+    }
+  }
+
+  .select-arrow-active * .select-items {
+    display: block;
+  }
+
+  .select-hide {
+    display: none;
   }
 }
 
@@ -208,20 +257,20 @@ fieldset {
   justify-content: space-between;
 }
 
-@media (width <= 40rem){
-  .form-popup{
+@media (width <= 40rem) {
+  .form-popup {
     width: 25rem;
   }
 
-  .date-wrapper{
+  .date-wrapper {
     flex-direction: column;
   }
 
-  .fielder-date-hour{
+  .fielder-date-hour {
     width: 100%;
   }
 
-  .fielder-date{
+  .fielder-date {
     width: 100%;
   }
 }

@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mundo Pet</title>
+    <link rel="stylesheet" href="./src/styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
@@ -233,22 +234,31 @@
             <fieldset>
               <legend>Data</legend>
               <div class="input-inner">
-                <input
-                  type="date"
-                  class="fielder-date"
-                  id="date"
-                />
+                <input type="date" class="fielder-date" id="date" />
               </div>
             </fieldset>
 
             <fieldset>
               <legend>Hora</legend>
               <div class="input-inner">
-                <input
-                  type="time"
-                  placeholder="Banho e tosa"
-                  class="fielder-date-hour"
-                />
+                <div class="field-hour">
+                  <div class="select-selected">--:--</div>
+                  <div class="select-items select-hide">
+                    <div>09:00</div>
+                    <div>10:00</div>
+                    <div>11:00</div>
+                    <div>12:00</div>
+                    <div>13:00</div>
+                    <div>14:00</div>
+                    <div>15:00</div>
+                    <div>16:00</div>
+                    <div>17:00</div>
+                    <div>18:00</div>
+                    <div>19:00</div>
+                    <div>20:00</div>
+                    <div>21:00</div>
+                  </ul>
+                </div>
               </div>
             </fieldset>
           </div>
