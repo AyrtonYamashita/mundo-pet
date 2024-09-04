@@ -1,0 +1,12 @@
+{
+  "name": "mundo-pt",
+  "description": "Aplicação web para agendamento de consultas de uma clínica veterinária",
+  "author": "Ayrton Yamashita",
+  "scripts": {
+    "server": "json-server --watch server.json --port 3333"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "json-server": "^1.0.0-beta.2"
+  }
+}
