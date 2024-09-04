@@ -8,3 +8,6 @@ import "./styles/sections.css"
 
 /* IMPORTANDO JS */
 import "./modules/form/show-form.js"
+
+/* IMPORTANDO LIBS */
+import "./libs/dayjs.js"
