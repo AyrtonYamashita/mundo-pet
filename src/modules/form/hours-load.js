@@ -1,5 +1,8 @@
 import { openingHours } from "../../utils/opening-hour.js"
+import { hourEvent } from "./show-hours.js"
 import dayjs from "dayjs"
+
+const hours = document.querySelector(".select-items")
 
 export function hoursLoad({ date }) {
   const opening = openingHours.map((hour) => {
@@ -12,6 +15,15 @@ export function hoursLoad({ date }) {
       available: isHourPast
     }
   })
+  opening.forEach(({ hour, available }) => {
+    const div = document.createElement("div")
+    div.textContent = hour
+    if (available) {
+      hours.append(div)
+    }
+  })
 
-  console.log(opening)
+  hourEvent()
+
 }
+
