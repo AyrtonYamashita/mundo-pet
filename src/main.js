@@ -10,6 +10,7 @@ import "./styles/sections.css"
 import "./modules/form/show-form.js"
 import "./modules/form/submit.js"
 import "./modules/form/show-hours.js"
+import "./modules/form/page-load.js"
 
 /* IMPORTANDO LIBS */
 import "./libs/dayjs.js"
