@@ -1,6 +1,12 @@
 const phone = document.querySelector("#phone");
+const tutor = document.querySelector("#name-tutor")
 
-phone.addEventListener("input", () => {
+
+tutor.oninput = () => {
+  console.log(tutor.value)
+}
+
+phone.oninput = () => {
   // Remove todos os caracteres que não são números
   let value = phone.value.replace(/\D/g, "");
 
@@ -17,4 +23,4 @@ phone.addEventListener("input", () => {
 
   // Atualiza o valor do input
   phone.value = value;
-});
+};
