@@ -15,7 +15,8 @@ close_form.onclick = () => {
   resetPage()
 }
 
-function resetPage() {
+export function resetPage() {
+
   popup_form.style.opacity = 0;
   popup_form.style.filter.remove;
 

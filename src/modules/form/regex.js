@@ -1,9 +1,14 @@
 const phone = document.querySelector("#phone");
 const tutor = document.querySelector("#name-tutor")
+const pet = document.querySelector("#name-pet")
 
-
+const regex = /[^a-zA-ZÀ-ÿ\s]/g
 tutor.oninput = () => {
-  console.log(tutor.value)
+  tutor.value = tutor.value.replace(regex, "")
+}
+
+pet.oninput = () => {
+  pet.value = pet.value.replace(regex, "")
 }
 
 phone.oninput = () => {

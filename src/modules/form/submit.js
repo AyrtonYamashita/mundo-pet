@@ -1,11 +1,14 @@
 import dayjs from "dayjs";
+import { resetPage } from "./show-form.js"
+import { newSchedule } from "../../services/schedule-new.js";
 const form = document.querySelector("form")
 const selectedDate = document.querySelector("#date")
 const tutorName = document.querySelector("#name-tutor")
 const petName = document.querySelector("#name-pet")
 const phone = document.querySelector("#phone")
-const description = document.querySelector("#description")
+const desc = document.querySelector("#description")
 const hourSelected = document.querySelector(".select-selected")
+
 
 
 const today = dayjs(new Date()).format("YYYY-MM-DD")
@@ -19,42 +22,42 @@ form.onsubmit = (e) => {
     const tutor = tutorName.value.trim()
     const pet = petName.value.trim()
     const contact = phone.value.trim()
-    const desc = description.value.trim()
+    const description = desc.value.trim()
     const schedule_hour = hourSelected.innerText
 
     if (!tutor) {
       return alert("Informe o nome do tutor!")
     }
-
     if (!pet) {
       return alert("Informe o nome do pet!")
     }
-
     if (!contact) {
       return alert("Informe um contato!")
     }
-
-    if (!desc) {
+    if (!description) {
       return alert("Informe a descrição do serviço!")
     }
-
     if (schedule_hour === "" || schedule_hour === "--:--") {
       return alert("Selecione a hora!")
     }
 
     const [hour] = hourSelected.innerText.split(":")
     const when = dayjs(selectedDate.value).add(hour, "hour")
-
     const id = new Date().getTime()
 
-    console.log({
-      id,
-      tutor,
-      pet,
-      contact,
-      desc,
-      when
-    })
+    resetPage()
+
+    tutorName.value = ""
+    petName.value = ``
+    phone.value = ``
+    desc.value = ``
+    hourSelected.innerText = "--:--"
+
+    const schedule = {
+      id, tutor, pet, description, contact, when
+    }
+
+    newSchedule({ schedule })
 
   } catch (e) {
     alert("Não foi possível realizar o agendamento")
