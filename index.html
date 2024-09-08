@@ -17,6 +17,8 @@
     />
   </head>
   <body>
+    <div class="alert-msg"></div>
+
     <header>
       <img src="./src/assets/logo.svg" alt="" />
     </header>
@@ -35,7 +37,6 @@
       </div>
 
       <div class="container">
-        
         <section class="morning">
           <div class="title">
             <div class="morning-icon">
@@ -48,20 +49,7 @@
           </div>
 
           <div class="list-schedules">
-            <ul>
-              <!-- <li>
-                <div>
-                  <span class="hour"> 09:00 </span>
-                  <span class="pacient">
-                    <strong>Thor</strong>
-                    <span class="name">/ Fernanda Costa</span>
-                  </span>
-                </div>
-
-                <span class="service"> Vacinação </span>
-                <span class="cancel">Remover agendamento</span>
-              </li> -->
-            </ul>
+            <ul></ul>
           </div>
         </section>
 
@@ -77,20 +65,7 @@
           </div>
 
           <div class="list-schedules">
-            <ul>
-              <!-- <li>
-                <div>
-                  <span class="hour"> 09:00 </span>
-                  <span class="pacient">
-                    <strong>Thor</strong>
-                    <span class="name">/ Fernanda Costa</span>
-                  </span>
-                </div>
-
-                <span class="service"> Vacinação </span>
-                <span class="cancel">Remover agendamento</span>
-              </li> -->
-            </ul>
+            <ul></ul>
           </div>
         </section>
 
@@ -106,19 +81,7 @@
           </div>
 
           <div class="list-schedules">
-            <ul>
-              <li>
-                <div>
-                  <span class="hour"> 20:00 </span>
-                  <span class="pacient">
-                    <strong>Max</strong>
-                    <span class="name">/ Camila Santos</span>
-                  </span>
-                </div>
-                <span class="service"> Limpeza de Dentes </span>
-                <span class="cancel">Remover agendamento</span>
-              </li>
-            </ul>
+            <ul></ul>
           </div>
         </section>
       </div>
@@ -156,6 +119,7 @@
                 placeholder="Helena Souza"
                 class="fielder"
                 id="name-tutor"
+                value="Ayrton"
                 required
               />
               <img
@@ -174,6 +138,7 @@
                 placeholder="Cheddar"
                 class="fielder"
                 id="name-pet"
+                value="mewo"
                 required
               />
               <img
@@ -192,6 +157,7 @@
                 placeholder="(00) 0 0000-0000"
                 class="fielder"
                 id="phone"
+                value="65993637054"
                 required
               />
               <img
@@ -205,7 +171,14 @@
           <fieldset>
             <legend>Descrição do serviço</legend>
             <div class="input-inner">
-              <input type="text" placeholder="Banho e tosa" class="desc" id="description" required/>
+              <input
+                type="text"
+                placeholder="Banho e tosa"
+                class="desc"
+                id="description"
+                value="Banho e Tosa"
+                required
+              />
             </div>
           </fieldset>
 
@@ -213,7 +186,7 @@
             <fieldset>
               <legend>Data</legend>
               <div class="input-inner">
-                <input type="date" class="fielder-date" id="date" required/>
+                <input type="date" class="fielder-date" id="date" required />
               </div>
             </fieldset>
 
@@ -221,9 +194,8 @@
               <legend>Hora</legend>
               <div class="input-inner">
                 <div class="field-hour">
-                  <div class="select-selected">--:--</div>
-                  <div class="select-items select-hide">
-                  </div>
+                  <div class="select-selected">09:00</div>
+                  <div class="select-items select-hide"></div>
                 </div>
               </div>
             </fieldset>

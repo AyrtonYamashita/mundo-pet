@@ -3,9 +3,9 @@ import { hourEvent } from "./hour-input.js"
 
 
 const hour = document.querySelector(".select-selected")
+const scheduleDate = document.getElementById("date-input")
 const selectedDate = document.getElementById("date")
 const hours = document.querySelector(".select-items")
-
 
 selectedDate.onchange = () => {
   hours.innerHTML = ``
@@ -13,4 +13,8 @@ selectedDate.onchange = () => {
 
   scheduleDays()
   hourEvent()
+}
+
+scheduleDate.onchange = () => {
+  scheduleDays()
 }

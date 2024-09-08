@@ -2,7 +2,8 @@ import dayjs from "dayjs";
 import { resetPage } from "./show-form.js"
 import { newSchedule } from "../../services/schedule-new.js";
 const form = document.querySelector("form")
-const selectedDate = document.querySelector("#date")
+const scheduleDate = document.querySelector("#date-input")
+const selectedDate = document.getElementById("date")
 const tutorName = document.querySelector("#name-tutor")
 const petName = document.querySelector("#name-pet")
 const phone = document.querySelector("#phone")
@@ -14,6 +15,8 @@ const hourSelected = document.querySelector(".select-selected")
 const today = dayjs(new Date()).format("YYYY-MM-DD")
 selectedDate.value = today
 selectedDate.min = today
+scheduleDate.value = today
+scheduleDate.min = today
 
 
 form.onsubmit = (e) => {
@@ -43,7 +46,7 @@ form.onsubmit = (e) => {
 
     const [hour] = hourSelected.innerText.split(":")
     const when = dayjs(selectedDate.value).add(hour, "hour")
-    const id = new Date().getTime()
+    const id = new Date().getTime().toString()
 
     resetPage()
 

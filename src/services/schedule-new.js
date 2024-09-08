@@ -1,4 +1,5 @@
 import { apiConfig } from "./api-config.js"
+import { alertMsg } from "../modules/alerts/show.js"
 
 export async function newSchedule({ schedule }) {
   try {
@@ -10,7 +11,7 @@ export async function newSchedule({ schedule }) {
       body: JSON.stringify(schedule)
     })
 
-    alert("Agendamento realizado com sucesso")
+    alertMsg("success", "Agendamento realizado com sucesso!")
   } catch (error) {
     alert("Ocorreu um erro ao registrar o agendamento... Tente novamente mais tarde.")
     console.log(error)

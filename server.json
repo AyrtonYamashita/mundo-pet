@@ -1,20 +1,3 @@
 {
-  "schedules": [
-    {
-      "id": 1725654452296,
-      "tutor": "Ayrton Yamashita",
-      "pet": "Mewozao",
-      "description": "Vacinação",
-      "contact": "(65) 9963-7054",
-      "when": "2024-09-06T23:00:00.000Z"
-    },
-    {
-      "id": 1725656295888,
-      "tutor": "Millena Mara",
-      "pet": "Teddy",
-      "description": "Castraçãao",
-      "contact": "(65) 99966-8944",
-      "when": "2024-09-06T21:00:00.000Z"
-    }
-  ]
+  "schedules": []
 }
