@@ -164,12 +164,25 @@ ul li div {
     height: 100%;
     border-radius: 0.5rem;
     filter: blur(50px);
-    background: #9282fa6e;
+    background: #9282fa48;
     z-index: -2;
   }
 
   &:hover {
     color: var(--content-primary);
+  }
+}
+
+.disable {
+  background: #151515;
+  color: gray;
+  cursor: not-allowed;
+  &::before {
+    opacity: 0;
+  }
+  &:hover {
+    background: #151515;
+    color: gray;
   }
 }
 
@@ -189,17 +202,16 @@ ul li div {
   ul li {
     flex-direction: column;
     justify-content: start;
-    gap: .325rem;
+    gap: 0.325rem;
     border-bottom: 1px solid #8181813d;
 
-    span:nth-child(3){
+    span:nth-child(3) {
       margin-left: auto;
-      margin-top: .75rem;
+      margin-top: 0.75rem;
     }
   }
 
   ul li div {
     width: 13rem;
   }
-
 }

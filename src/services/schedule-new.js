@@ -13,7 +13,7 @@ export async function newSchedule({ schedule }) {
 
     alertMsg("success", "Agendamento realizado com sucesso!")
   } catch (error) {
-    alert("Ocorreu um erro ao registrar o agendamento... Tente novamente mais tarde.")
+    alertMsg("error", "Ocorreu um erro ao realizar o agendamento.")
     console.log(error)
   }
 

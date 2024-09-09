@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { resetPage } from "./show-form.js"
 import { newSchedule } from "../../services/schedule-new.js";
 import { scheduleDays } from "../schedules/load.js"
+import { alertMsg } from "../alerts/show.js";
 
 const form = document.querySelector("form")
 const scheduleDate = document.querySelector("#date-input")
@@ -32,19 +33,19 @@ form.onsubmit = async (e) => {
     const schedule_hour = hourSelected.innerText
 
     if (!tutor) {
-      return alert("Informe o nome do tutor!")
+      return alertMsg("error", "Informe o nome do tutor.")
     }
     if (!pet) {
-      return alert("Informe o nome do pet!")
+      return alertMsg("error", "Informe o nome do pet.")
     }
     if (!contact) {
-      return alert("Informe um contato!")
+      return alertMsg("error", "Insira um contato válido.")
     }
     if (!description) {
-      return alert("Informe a descrição do serviço!")
+      return alertMsg("error", "Informe a descrição do serviço.")
     }
     if (schedule_hour === "" || schedule_hour === "--:--") {
-      return alert("Selecione a hora!")
+      return alertMsg("error", "Selecione o horário para agendamento.")
     }
 
     const [hour] = hourSelected.innerText.split(":")
@@ -67,7 +68,7 @@ form.onsubmit = async (e) => {
     await scheduleDays()
 
   } catch (e) {
-    alert("Não foi possível realizar o agendamento")
+    alertMsg("error", "Ocorreu um erro ao realizar o agendamento.")
     console.log(e)
   }
 }

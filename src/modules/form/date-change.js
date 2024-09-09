@@ -1,5 +1,4 @@
-import { scheduleDays } from "../schedules/load.js"
-
+import { scheduleDays, schedulesMain } from "../schedules/load.js"
 
 const hour = document.querySelector(".select-selected")
 const scheduleDate = document.getElementById("date-input")
@@ -13,5 +12,5 @@ selectedDate.onchange = () => {
 }
 
 scheduleDate.onchange = () => {
-  scheduleDays()
+  schedulesMain()
 }

@@ -13,3 +13,13 @@ export async function scheduleDays() {
   hoursLoad({ date, dailySchedules })
 
 }
+
+const selectedDay = document.getElementById("date-input")
+export async function schedulesMain() {
+  const date = selectedDay.value
+  const dailySchedules = await fetchSchedule({ date })
+
+  scheduleShow({ dailySchedules })
+  hoursLoad({ date, dailySchedules })
+
+}

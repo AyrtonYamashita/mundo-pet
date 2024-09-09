@@ -1,10 +1,12 @@
-
 export function alertMsg(type, message) {
 
   const alert_msg = document.querySelector(".alert-msg");
   const icon_msg = document.createElement("img");
   const msg = document.createElement("span");
   const icon_close = document.createElement("img");
+
+  alert_msg.innerHTML = ``;
+
 
   icon_msg.setAttribute("src", `./src/assets/${type}.svg`)
   icon_msg.setAttribute("alt", "ícone de alerta")

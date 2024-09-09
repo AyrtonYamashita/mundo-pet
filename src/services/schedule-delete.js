@@ -1,4 +1,5 @@
 import { apiConfig } from "./api-config";
+import { alertMsg } from "../modules/alerts/show";
 
 export async function scheduleDelete({ id }) {
   try {
@@ -6,9 +7,9 @@ export async function scheduleDelete({ id }) {
       method: "DELETE",
     })
 
-    alert("Agendamento cancelado com sucesso!")
+    alertMsg("success", "Agendamento cancelado com sucesso.")
   } catch (e) {
-    alert("Ocorreu um erro ao cancelar o agendamento.")
+    alertMsg("error", "Ocorreu um erro ao cancelar o agendamento.")
     console.log(e)
   }
 }

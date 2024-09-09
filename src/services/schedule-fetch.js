@@ -1,3 +1,4 @@
+import { alertMsg } from "../modules/alerts/show.js";
 import { apiConfig } from "./api-config.js";
 import dayjs from "dayjs";
 
@@ -11,7 +12,7 @@ export async function fetchSchedule({ date }) {
 
     return dailySchedules
   } catch (e) {
-    alert("Ocorreu um erro ao buscar os agendamentos do dia selecionado...")
+    alertMsg("error", "Ocorreu um erro ao buscar agendamentos.")
     console.log(e)
   }
 
