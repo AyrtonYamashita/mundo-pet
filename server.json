@@ -1,28 +1,3 @@
 {
-  "schedules": [
-    {
-      "id": "1725899442992",
-      "tutor": "Ayrton",
-      "pet": "mewo",
-      "description": "Banho e Tosa",
-      "contact": "65993637054",
-      "when": "2024-09-09T18:00:00.000Z"
-    },
-    {
-      "id": "1725899591043",
-      "tutor": "Ayrton",
-      "pet": "mewo",
-      "description": "Banho e Tosa",
-      "contact": "65993637054",
-      "when": "2024-09-09T17:00:00.000Z"
-    },
-    {
-      "id": "1725899612720",
-      "tutor": "Millena Mara",
-      "pet": "Mewozao",
-      "description": "Vacinação",
-      "contact": "(54) 99363-7054",
-      "when": "2024-09-09T19:00:00.000Z"
-    }
-  ]
+  "schedules": []
 }

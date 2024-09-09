@@ -13,6 +13,7 @@ import "./modules/form/submit.js"
 import "./modules/form/page-load.js"
 import "./modules/form/regex.js"
 import "./modules/form/date-change.js"
+import "./modules/schedules/remove.js"
 
 /* IMPORTANDO LIBS */
 import "./libs/dayjs.js"

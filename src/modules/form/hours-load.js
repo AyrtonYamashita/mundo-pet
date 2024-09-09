@@ -1,7 +1,6 @@
 import { openingHours } from "../../utils/opening-hour.js"
 import dayjs from "dayjs"
 
-
 const hours = document.querySelector(".select-items")
 
 export function hoursLoad({ date, dailySchedules }) {
@@ -27,7 +26,8 @@ export function hoursLoad({ date, dailySchedules }) {
     div.classList.add(available ? "item-available" : "item-not-available")
     hours.append(div)
   })
-  const items = document.querySelectorAll(".select-items div")
+  
+  const items = document.querySelectorAll(".item-available")
   const selected = document.querySelector(".select-selected");
 
   selected.onclick = () => {
