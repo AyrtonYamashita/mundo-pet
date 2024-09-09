@@ -7,8 +7,6 @@ export async function fetchSchedule({ date }) {
 
     const data = await response.json()
 
-    console.log(data)
-
     const dailySchedules = data.filter((schedule) => dayjs(date).isSame(schedule.when, "day"))
 
     return dailySchedules

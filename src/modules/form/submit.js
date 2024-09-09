@@ -1,6 +1,8 @@
 import dayjs from "dayjs";
 import { resetPage } from "./show-form.js"
 import { newSchedule } from "../../services/schedule-new.js";
+import { scheduleDays } from "../schedules/load.js"
+
 const form = document.querySelector("form")
 const scheduleDate = document.querySelector("#date-input")
 const selectedDate = document.getElementById("date")
@@ -19,9 +21,10 @@ scheduleDate.value = today
 scheduleDate.min = today
 
 
-form.onsubmit = (e) => {
+form.onsubmit = async (e) => {
   e.preventDefault()
   try {
+
     const tutor = tutorName.value.trim()
     const pet = petName.value.trim()
     const contact = phone.value.trim()
@@ -60,7 +63,8 @@ form.onsubmit = (e) => {
       id, tutor, pet, description, contact, when
     }
 
-    newSchedule({ schedule })
+    await newSchedule({ schedule })
+    await scheduleDays()
 
   } catch (e) {
     alert("Não foi possível realizar o agendamento")

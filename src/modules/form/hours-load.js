@@ -1,20 +1,23 @@
 import { openingHours } from "../../utils/opening-hour.js"
-import { hourEvent } from "./hour-input.js"
 import dayjs from "dayjs"
 
 
 const hours = document.querySelector(".select-items")
 
-export function hoursLoad({ date }) {
+export function hoursLoad({ date, dailySchedules }) {
+  hours.innerHTML = ``
+
+  const unavailableHours = dailySchedules.map((schedule) => dayjs(schedule.when).format("HH:mm"))
 
   const opening = openingHours.map((hour) => {
     const [scheduleHour] = hour.split(":")
 
-    const isHourPast = dayjs(date).add(scheduleHour, "hour").isAfter(dayjs())
+    const isHourPast = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs())
+    const available = !unavailableHours.includes(hour) && !isHourPast
 
     return {
       hour,
-      available: isHourPast
+      available
     }
   })
 
@@ -24,8 +27,18 @@ export function hoursLoad({ date }) {
     div.classList.add(available ? "item-available" : "item-not-available")
     hours.append(div)
   })
+  const items = document.querySelectorAll(".select-items div")
+  const selected = document.querySelector(".select-selected");
 
-  hourEvent()
+  selected.onclick = () => {
+    hours.classList.toggle("select-hide")
+  }
 
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      selected.textContent = item.textContent;
+      hours.classList.add("select-hide")
+    })
+  })
 }
 

@@ -16,15 +16,12 @@ export function alertMsg(type, message) {
   icon_close.setAttribute("src", "./src/assets/close.svg")
 
   icon_close.onclick = (e) => {
-    const alert_close = e.target.parentElement;
-
-    alert_close.classList.remove(type)
-    alert_close.classList.remove("reveal")
+    const element_alert = e.target.parentElement;
+    element_alert.classList.remove(type)
+    element_alert.classList.remove("reveal")
   }
 
   alert_msg.append(icon_msg, msg, icon_close);
-
   alert_msg.classList.add(type);
   alert_msg.classList.add("reveal");
-
 }
