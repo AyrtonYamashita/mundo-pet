@@ -2,7 +2,11 @@
   "name": "mundo-pet",
   "description": "Aplicação web para agendamento de consultas de uma clínica veterinária",
   "author": "Ayrton Yamashita",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
+    "start": "node ./src/main.js",
     "server": "json-server --watch server.json --port 3333",
     "build": "webpack",
     "dev": "webpack serve"
